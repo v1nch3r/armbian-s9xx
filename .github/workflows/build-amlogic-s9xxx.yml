@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo timedatectl set-timezone "${TZ}"
           sudo mkdir -vp amlogic-s9xxx-armbian/build/output/images/
-          cd amlogic-s9xxx-armbian/build/output/images/ && sudo wget http://armbian.hosthatch.com/archive/odroidn2/archive/Armbian_21.08.1_Odroidn2_bullseye_current_5.10.60.img.xz
+          cd amlogic-s9xxx-armbian/build/output/images/ && sudo wget http://armbian.hosthatch.com/archive/odroidn2/archive/Armbian_21.08.1_Odroidn2_bullseye_current_5.10.60.img.xz && sudo gunzip *.xz
      
       - name: Repacking
         run: |
