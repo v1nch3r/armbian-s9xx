@@ -42,7 +42,7 @@ jobs:
       - name: Repacking
         run: |
           sudo chmod +x amlogic-s9xxx-armbian/rebuild
-          cd amlogic-s9xxx-armbian/ && sudo ./rebuild -b $PROC_LISTS -k $KERNEL_VR -r $KERNEL_REPO -a false
+          cd amlogic-s9xxx-armbian/ && sudo ./rebuild -b $PROC_LISTS -u stable -k 6.1.28 -a false
           echo "BUILD_TAG=Armbian-$(date +"%Y.%m.%d")" >> ${GITHUB_ENV}
  
       - name: Upload Armbian Firmware to Release
